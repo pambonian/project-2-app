@@ -1,6 +1,6 @@
 {
   "development": {
-    "database": "express_authentication_development",
+    "database": "plane_selector_project",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
