@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Aircraft.init({
-    accountID: DataTypes.INTEGER,
-    modelId: DataTypes.INTEGER
+    accountId: DataTypes.INTEGER,
+    airplaneId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Aircraft',

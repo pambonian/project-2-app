@@ -1,14 +1,14 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Models', {
+    await queryInterface.createTable('Airplanes', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      modelName: {
         type: Sequelize.STRING
       },
       manufacturer: {
@@ -32,7 +32,7 @@ module.exports = {
       takeoffLength: {
         type: Sequelize.INTEGER
       },
-      fuelCap: {
+      fuelCapacity: {
         type: Sequelize.INTEGER
       },
       wikiLink: {
@@ -55,6 +55,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Models');
+    await queryInterface.dropTable('Airplanes');
   }
 };
