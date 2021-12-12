@@ -1,6 +1,5 @@
 'use strict';
 const bcrypt = require('bcryptjs');
-const { datatype } = require('faker');
 
 const {
   Model
@@ -42,8 +41,7 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Password must be between 8 and 99 characters'
         }
       }
-    },
-    profilePicture: DataTypes.STRING
+    }
   }, {
     sequelize,
     modelName: 'User',
