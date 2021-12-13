@@ -52,4 +52,33 @@ const server = app.listen(PORT, () => {
   console.log(`Connected at port ${PORT}`);
 });
 
+
+
+// CREATE
+const { Airplane } = require("./models");
+
+Airplane.create({
+    modelName: 'M350',
+    manufacturer: 'Piper Aircraft',
+    price: ,
+    maxRange: ,
+    maxOccupants: ,
+    maxSpeed: ,
+    usefulLoad: ,
+    takeoffLength: ,
+    fuelCapacity: ,
+    wikiLink: '',
+    imageLink: '',
+    videoLink: ''
+})
+.then(function(newPlane) {
+  console.log('NEW AIRPLANE ADDED');
+  console.log(newPlane.toJSON());
+})
+.catch(function(error){
+  console.log('Error while creating new airplane', error);
+});
+
+
+// DON'T TOUCH
 module.exports = server;
