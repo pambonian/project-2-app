@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Airplane</title>
+</head>
+<body>
+    <form method="POST" action="/airplanes">
+        <label for="modelName">Model Name</label>
+        <input type="text" name="modelName">
+      
+        <label for="manufacturer">Manufacturer</label>
+        <input id="manufacturer" type="text" name="manufacturer">
+    
+        <label for="price">Price</label>
+        <input id="price" type="text" name="price">
+    
+        <label for="maxRange">Max Range</label>
+        <input id="maxRange" type="text" name="maxRange">
+
+        <label for="maxOccupants">Max Occupants</label>
+        <input id="maxOccupants" type="text" name="maxOccupants">
+
+        <label for="maxSpeed">Max Speed</label>
+        <input id="maxSpeed" type="text" name="maxSpeed">
+
+        <label for="usefulLoad">Useful Load</label>
+        <input id="usefulLoad" type="text" name="usefulLoad">
+
+        <label for="takeoffLength">Takeoff Length</label>
+        <input id="takeoffLength" type="text" name="takeoffLength">
+
+        <label for="fuelCapacity">Fuel Capacity</label>
+        <input id="fuelCapacity" type="text" name="fuelCapacity">
+
+        <label for="wikiLink">Wikipedia Link</label>
+        <input id="wikiLink" type="text" name="wikiLink">
+
+        <label for="imageLink">Image Link</label>
+        <input id="imageLink" type="text" name="imageLink">
+
+        <label for="videoLink">Video Link</label>
+        <input id="videoLink" type="text" name="videoLink">
+      
+        <input type="submit">
+      </form>
+</body>
+</html>
+
+        <!-- 
+        modelName: req.body.modelName,
+        manufacturer: req.body.manufacturer,
+        price: Number(req.body.length),
+        maxRange: Number(req.body.length),
+        maxOccupants: Number(req.body.length),
+        maxSpeed: Number(req.body.length),
+        usefulLoad: Number(req.body.length),
+        takeoffLength: Number(req.body.length),
+        fuelCapacity: Number(req.body.length),
+        wikiLink: req.body.wikiLink,
+        imageLink: req.body.imageLink,
+        videoLink: req.body.videoLink -->

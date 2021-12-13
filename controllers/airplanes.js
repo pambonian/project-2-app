@@ -25,8 +25,8 @@ router.get('/new', function(req, res) {
 router.post('/', function(req, res) {
     console.log('SUBMITTED FORM', req.body);
     Airplane.create({
-        modelName: DataTypes.STRING,
-        manufacturer: DataTypes.STRING,
+        modelName: req.body.modelName,
+        manufacturer: req.body.manufacturer,
         price: Number(req.body.length),
         maxRange: Number(req.body.length),
         maxOccupants: Number(req.body.length),
@@ -34,9 +34,9 @@ router.post('/', function(req, res) {
         usefulLoad: Number(req.body.length),
         takeoffLength: Number(req.body.length),
         fuelCapacity: Number(req.body.length),
-        wikiLink: title: req.body.wikiLink,
-        imageLink: title: req.body.imageLink,
-        videoLink: title: req.body.videoLink
+        wikiLink: req.body.wikiLink,
+        imageLink: req.body.imageLink,
+        videoLink: req.body.videoLink
     })
     .then(function(newAirplane) {
         console.log('NEW AIRPLANE', newAirplane.toJSON());
@@ -51,16 +51,24 @@ router.post('/', function(req, res) {
 });
 
 router.put('/:id', function(req, res) {
-    console.log('EDOT FORM DATA THAT WAS SUBMITTED', req.body);
+    console.log('EDIT FORM DATA THAT WAS SUBMITTED', req.body);
     Airplane.update({
-        title: req.body.title,
-        length: Number(req.body.length),
-        tracks: Number(req.body.tracks),
-        year: Number(req.body.year)
+        modelName: req.body.modelName,
+        manufacturer: req.body.manufacturer,
+        price: Number(req.body.length),
+        maxRange: Number(req.body.length),
+        maxOccupants: Number(req.body.length),
+        maxSpeed: Number(req.body.length),
+        usefulLoad: Number(req.body.length),
+        takeoffLength: Number(req.body.length),
+        fuelCapacity: Number(req.body.length),
+        wikiLink: req.body.wikiLink,
+        imageLink: req.body.imageLink,
+        videoLink: req.body.videoLink
     }, {where: {id: Number(req.params.id)}})
     .then(function(response){
         console.log(response);
-        res.redirect(`/airplanes/${Number(req.params.id)}`);
+        res.redirect(`/airplanes`);
     })
     .catch(function(err){
         console.log('ERROR', err);

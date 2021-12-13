@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Airplanes</title>
+</head>
+<body>
+    <% for( let i = 0; i < airplanes.length; i++ ) { %>
+        <% let a = airplanes[i] %> 
+        <% a = a.toJSON() %>
+        <p> <%= a.modelName %></p>
+        <a href="/airplanes/<%= a.id %>">View Airplane </a><br>
+        <a href="/airplanes/edit/<%= a.id %>"> Edit Airplane</a>
+        <form method="POST" action="/airplanes/<%= a.id %>/?_method=DELETE">
+            <input type="submit" value="Delete Airplane">
+        </form>
+        <hr>
+    <% } %>
+</body>
+</html>

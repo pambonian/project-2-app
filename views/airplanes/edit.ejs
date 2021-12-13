@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Airplane</title>
+</head>
+<body>
+    <form method="POST" action="/airplanes/<%= airplane.id %>/?_method=PUT">
+        <label for="modelName">Model Name</label>
+        <input type="text" name="modelName" value="<%= airplane.modelName %> ">
+      
+        <label for="manufacturer">Manufacturer</label>
+        <input id="manufacturer" type="text" name="manufacturer" value="<%= airplane.manufacturer %> " >
+    
+        <label for="imageLink">Image Link</label>
+        <input id="imageLink" type="text" name="imageLink" value="<%= airplane.imageLink %> ">
+    
+        <label for="videoLink">Video Link</label>
+        <input id="videoLink" type="text" name="videoLink" value="<%= airplane.videoLink %> ">
+
+        <label for="wikiLink">Wikipedia Link</label>
+        <input id="wikiLink" type="text" name="wikiLink" value="<%= airplane.wikiLink %> ">
+      
+        <input type="submit">
+      </form>
+</body>
+</html>

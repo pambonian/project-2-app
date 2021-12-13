@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Airplane</title>
+</head>
+<body>
+        <a href="/airplanes">Return to Airplanes</a><br
+        <% let a = airplane %> 
+        <% let name = a.modelName %> 
+        <% let manufacturer = a.manufacturer %>
+        <% let price = a.price %>
+        <% let range = a.maxRange %>
+        <% let occupants = a.maxOccupants %>
+        <% let speed = a.maxSpeed %>
+        <% let load = a.usefulLoad %>
+        <% let takeoff = a.takeoffLength %>
+        <% let fuel = a.fuelCapacity %>
+        <% let wiki = a.wikiLink %>
+        <% let image = a.imageLink %>
+        <% let video = a.videoLink %>
+        <img src="<%a.image%>"  alt="an image of the plane should be displayed">
+        <h1> <%= a.modelName %></h1>
+        <p> This model aircraft is manufactured by <%= manufacturer %> .</p>
+        <p> The base model sells for $ <%= price %> .</p>
+        <p> Per flight, it has a maximum range of <%= range %> nautical miles.</p>
+        <p> It seats <%= occupants %> people.</p>
+        <p> It has a cruising speed of <%= speed %> ktas.</p>
+        <p> It can carry <%= load %> pounds of cargo (useful load).</p>
+        <p> This plane requires at least <%= takeoff %> feet of runway for takeoff.</p>
+        <p> The plane has a fuel capacity of <%= fuel %> gallons.</p>
+        <p> INSERT LINK FUNCTION HERE <%= wiki %> .</p>
+        <p> INSERT VIDEO FUNCTION HERE <%= video %> .</p>
+        <a href="/airplanes/">Return to all Airplanes</a><br>
+        <a href="/airplanes/edit/<%= a.id %>">Edit</a>
+
+        <form method="POST" action="/airplanes/<%= a.id %>/?_method=DELETE">
+            <input type="submit" value="Delete Airplane">
+        </form>
+        <!-- https://i.imgur.com/2A9qIDe.jpg -->
+</body>
+</html>
