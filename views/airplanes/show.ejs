@@ -31,8 +31,11 @@
         <p> It can carry <%= load %> pounds of cargo (useful load).</p>
         <p> This plane requires at least <%= takeoff %> feet of runway for takeoff.</p>
         <p> The plane has a fuel capacity of <%= fuel %> gallons.</p>
-        <p> INSERT LINK FUNCTION HERE <%= wiki %> .</p>
-        <p> INSERT VIDEO FUNCTION HERE <%= video %> .</p>
+        <p> INSERT LINK FUNCTION HERE <%= wiki %></p>
+        <a href="<% a.wikiLink %>" target="blank" rel="noopener noreferrer">
+            Visit the <% a.modelName %> Wikipedia Page
+        </a>
+        <p> INSERT VIDEO FUNCTION HERE <%= video %></p>
         <a href="/airplanes/">Return to all Airplanes</a><br>
         <a href="/airplanes/edit/<%= a.id %>">Edit</a>
 
