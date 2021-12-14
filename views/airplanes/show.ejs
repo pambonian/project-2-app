@@ -7,7 +7,7 @@
     <title>View Airplane</title>
 </head>
 <body>
-        <a href="/airplanes">Return to Airplanes</a><br
+        <a href="/airplanes">Return to Airplanes</a><br>
         <% let a = airplane %> 
         <% let name = a.modelName %> 
         <% let manufacturer = a.manufacturer %>
@@ -21,7 +21,7 @@
         <% let wiki = a.wikiLink %>
         <% let image = a.imageLink %>
         <% let video = a.videoLink %>
-        <img src="<%a.image%>"  alt="an image of the plane should be displayed">
+        <img src="https://i.imgur.com/<% image %> " width="300" height="200" alt="an image of the plane">
         <h1> <%= a.modelName %></h1>
         <p> This model aircraft is manufactured by <%= manufacturer %> .</p>
         <p> The base model sells for $ <%= price %> .</p>
@@ -32,10 +32,7 @@
         <p> This plane requires at least <%= takeoff %> feet of runway for takeoff.</p>
         <p> The plane has a fuel capacity of <%= fuel %> gallons.</p>
         <p> INSERT LINK FUNCTION HERE <%= wiki %></p>
-        <a href="<% a.wikiLink %>" target="blank" rel="noopener noreferrer">
-            Visit the <% a.modelName %> Wikipedia Page
-        </a>
-        <p> INSERT VIDEO FUNCTION HERE <%= video %></p>
+        <iframe width="560" height="315" src="https://www.youtube.com<% video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
         <a href="/airplanes/">Return to all Airplanes</a><br>
         <a href="/airplanes/edit/<%= a.id %>">Edit</a>
 
